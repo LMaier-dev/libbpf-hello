@@ -26,6 +26,13 @@ Required permissions to push code into kernel:
 sudo setcap cap_sys_resource,cap_sys_admin,cap_bpf+eip $(which bee)
 ```
 
+Fix docker permission denied:
+```console
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
 ### Build:
 
 ```console
