@@ -36,22 +36,22 @@ newgrp docker
 ### Build:
 
 ```console
-bee build hello.c hello:v1
+bee build hello-world.c hello-world:v1
 ```
 #### Run local image:
 ```console
-bee run hello:v1
+bee run hello-world:v1
 ```
 
 ### Push:
 ```console
-bee tag hello:v1 <local-ip>:5000/hello:v1
-bee push --plain-http <local-ip>:5000/hello:v1
+bee tag hello-world:v1 <local-ip>:5000/hello-world:v1
+bee push --plain-http <local-ip>:5000/hello-world:v1
 ```
 
 ### Pull/Run:
 ```console
-bee pull --plain-http <local-ip>:5000/hello:v1
-bee run <local-ip>:5000/hello:v1
+bee pull --plain-http <local-ip>:5000/hello-world:v1
+bee run <local-ip>:5000/hello-world:v1
 ```
 replace `<local-ip>` with your privately hosted docker registry
