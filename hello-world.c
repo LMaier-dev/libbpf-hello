@@ -38,7 +38,7 @@ int BPF_KPROBE(tcp_v4_connect, struct sock *sk)
 	// For example:
 	event->pid = bpf_get_current_pid_tgid();
 
-	memcpy(event->message, "Hello World!", 15);
+	memcpy(event->message, "Hello World!!", 15);
 
 	bpf_ringbuf_submit(event, 0);
 	
